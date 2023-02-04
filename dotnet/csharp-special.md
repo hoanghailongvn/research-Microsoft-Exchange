@@ -39,3 +39,44 @@ bool IsConverted = int.TryParse(str, out int I);
 ## Variables in C\#
 
 ![variables-in-c#.png](./img/variables-in-csharp.png)
+
+## ILDASM tool
+
+The ILDASM (IL  Disassembler ) is a great tool for those who want to take an insight look of IL code. This tool is used to view the assembly content for all the code components.  This tool is installed with your Visual Studio and in a traditional way, can be accessed from the Visual Studio Command Prompt.  In this post, you will learn how you can open the same tool inside Visual Studio by using a shortcut key.
+
+<https://dailydotnettips.com/did-you-know-you-can-launch-ildasm-tool-from-inside-visual-studio-itself-how/>
+
+## Auto Implemented Properties
+
+When we create Auto Implemented Properties, behind the scene, the compiler will create the private anonymous field for each property to hold the data.
+
+```c#
+using System;
+namespace PropertyDemo
+{
+    public class Employee
+    {
+        public int Id { get; set; }
+        public int Age { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee employee = new Employee();
+            employee.Id = 101;
+            employee.Age = 101;
+            employee.Name = "Pranaya";
+            employee.Address = "BBSR, Odisha, India";
+            Console.WriteLine("Employee Details:");
+            Console.WriteLine($"Id: {employee.Id}");
+            Console.WriteLine($"Name: {employee.Name}");
+            Console.WriteLine($"Age: {employee.Age}");
+            Console.WriteLine($"Address: {employee.Address}");
+            Console.ReadKey();
+        }
+    }
+}
+```
