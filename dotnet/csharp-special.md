@@ -80,3 +80,42 @@ namespace PropertyDemo
     }
 }
 ```
+
+## Private Constructor Use Case
+
+The use case of Private Constructor in C# is that if you don’t want your class to be instantiated from outside the class, then add a private constructor without any public constructor in your class.
+
+used to implement Singleton Design Pattern
+
+## Explicit calling of the garbage collector
+
+```c#
+using System;
+namespace DestructorExample
+{
+    class DestructorDemo
+    {
+        public DestructorDemo()
+        {
+            Console.WriteLine("Constructor Object Created");
+        }
+        ~DestructorDemo()
+        {
+            string type = GetType().Name;
+            Console.WriteLine($"Object {type} is Destroyed");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DestructorDemo obj1 = new DestructorDemo();
+            DestructorDemo obj2 = new DestructorDemo();
+            //Making obj1 for Garbage Collection
+            obj1 = null;
+            GC.Collect();
+            Console.ReadKey();
+        }
+    }
+}
+```
