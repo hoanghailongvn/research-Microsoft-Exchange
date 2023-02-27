@@ -1,6 +1,11 @@
-# Exchange Server vulnerability
+# Exchange Server vulnerabilities research
 
+## Contents
 
+1. Lab and tools setup
+2. Exchange server architecture
+3. Vulnerabilities
+4. C# and .NET
 
 ## References
 
