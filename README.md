@@ -2,10 +2,10 @@
 
 ## Contents
 
-1. Lab and tools setup
-2. Exchange server architecture
-3. Vulnerabilities
-4. C# and .NET
+1. [Lab and tools setup](./setup/)
+2. [Exchange server architecture](./architecture/)
+3. [Vulnerabilities](./vulnerabilities/)
+4. [C# and .NET](./learn/)
 
 ## References
 
